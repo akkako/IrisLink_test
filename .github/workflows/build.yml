@@ -30,8 +30,6 @@ jobs:
           ls -l ./
 
           git clone https://github.com/akkako/riscv-wch-elf-gcc12.git
-          sudo apt install p7zip-full
-          7z --version
           7z x ./riscv-wch-elf-gcc12/riscv-wch-elf-gcc12.7z -o ./riscv-wch-elf-gcc12
           ls -l ./riscv-wch-elf-gcc12
 

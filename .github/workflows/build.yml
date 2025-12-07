@@ -30,7 +30,7 @@ jobs:
           ls -l ./
 
           git clone https://github.com/akkako/riscv-wch-elf-gcc12.git
-          7z x ./riscv-wch-elf-gcc12/riscv-wch-elf-gcc12.7z -o ./riscv-wch-elf-gcc12
+          7z x ./riscv-wch-elf-gcc12/riscv-wch-elf-gcc12.7z -o./riscv-wch-elf-gcc12
           ls -l ./riscv-wch-elf-gcc12
 
       - name: Build Application

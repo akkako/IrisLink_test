@@ -30,15 +30,18 @@ jobs:
           ls -l ./
 
           git clone https://github.com/akkako/riscv-wch-elf-gcc12.git
-          7z x ./riscv-wch-elf-gcc12/riscv-wch-elf-gcc12.7z -o./riscv-wch-elf-gcc12
-          chmod +x ~/riscv-wch-elf-gcc12/riscv-wch-elf-gcc12/bin/*
-          ls -l ./riscv-wch-elf-gcc12
+          cd ./riscv-wch-elf-gcc12
+          ls -l
+          tar -zcvf MRS_Toolchain_Linux_x64_V230.tar.xz ./
+          tree -d -L 4
+
+
 
       - name: Build Application
         run: |
           cd ${{ github.workspace }} 
 
-          export PATH=$PATH:~/riscv-wch-elf-gcc12/riscv-wch-elf-gcc12/bin
+          export PATH=$PATH:~/riscv-wch-elf-gcc12/Toolchain/RISC-V Embedded GCC12/bin
 
           make all
 

@@ -30,7 +30,10 @@ jobs:
 
           git clone https://github.com/akkako/riscv-wch-elf-gcc12.git
           cd ./riscv-wch-elf-gcc12
-          tar -Jxvf MRS_Toolchain_Linux_x64_V230.tar.xz
+          tar -Jxf MRS_Toolchain_Linux_x64_V230.tar.xz
+
+          cd Toolchain
+          mv "RISC-V Embedded GCC12" "gcc12"
           
 
 
@@ -39,7 +42,7 @@ jobs:
         run: |
           cd ${{ github.workspace }} 
 
-          export PATH=$PATH:"~/riscv-wch-elf-gcc12/Toolchain/RISC-V Embedded GCC12/bin"
+          export PATH=$PATH:~/riscv-wch-elf-gcc12/Toolchain/gcc12/bin
 
           make all
 

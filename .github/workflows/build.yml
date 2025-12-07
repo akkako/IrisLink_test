@@ -31,7 +31,7 @@ jobs:
           git clone https://github.com/akkako/riscv-wch-elf-gcc12.git
           cd ./riscv-wch-elf-gcc12
           mkdir toolchain
-          tar -zxvf MRS_Toolchain_Linux_x64_V230.tar.xz ./toolchain
+          tar -Jxvf MRS_Toolchain_Linux_x64_V230.tar.xz ./toolchain
           
 
 

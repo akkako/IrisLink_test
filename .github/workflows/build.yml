@@ -39,7 +39,7 @@ jobs:
         run: |
           cd ${{ github.workspace }} 
 
-          export PATH=$PATH:~/riscv-wch-elf-gcc12/toolchain/Toolchain/RISC-V Embedded GCC12/bin
+          export PATH=$PATH:"~/riscv-wch-elf-gcc12/toolchain/Toolchain/RISC-V Embedded GCC12/bin"
 
           make all
 

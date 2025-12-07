@@ -23,10 +23,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        # with:
-          # submodules: true
-
-      # - uses: gregdavill/setup-riscv-gnu-toolchain@v2.0
 
       - name: Install WCH modified GCC toolchain
         run: |
@@ -34,12 +30,10 @@ jobs:
           ls -l ./
 
           git clone https://github.com/akkako/riscv-wch-elf-gcc12.git
-          apt install p7zip-full
+          sudo apt install p7zip-full
           7z --version
           7z x ./riscv-wch-elf-gcc12/riscv-wch-elf-gcc12.7z -o ./riscv-wch-elf-gcc12
           ls -l ./riscv-wch-elf-gcc12
-
-          export PATH=$PATH:~/riscv-wch-elf-gcc12/riscv-wch-elf-gcc12/bin
 
       - name: Build Application
         run: |

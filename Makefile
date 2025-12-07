@@ -72,7 +72,7 @@ LIBDIR +=
 #######################################
 PREFIX = riscv-wch-elf-
 # 启用下一项以指定GCC目录
-GCC_PATH = C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC12/bin
+# GCC_PATH = C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC12/bin
 
 ifdef GCC_PATH
 CC = "$(GCC_PATH)/$(PREFIX)gcc"

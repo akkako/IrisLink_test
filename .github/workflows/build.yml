@@ -32,6 +32,7 @@ jobs:
           cd ./riscv-wch-elf-gcc12
           mkdir toolchain
           tar -zcvf MRS_Toolchain_Linux_x64_V230.tar.xz ./toolchain
+          tree -d -L 4
 
 
 

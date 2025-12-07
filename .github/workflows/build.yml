@@ -31,6 +31,7 @@ jobs:
 
           git clone https://github.com/akkako/riscv-wch-elf-gcc12.git
           7z x ./riscv-wch-elf-gcc12/riscv-wch-elf-gcc12.7z -o./riscv-wch-elf-gcc12
+          chmod +x ~/riscv-wch-elf-gcc12/riscv-wch-elf-gcc12/bin/*
           ls -l ./riscv-wch-elf-gcc12
 
       - name: Build Application
